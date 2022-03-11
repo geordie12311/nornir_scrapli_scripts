@@ -21,9 +21,8 @@ def pull_structured_data(task):
         rprint(f"{task.host} {local_intf} is connected to {remote_device} {remote_intf}")
 #above function is going to create an object called pull_structured_data
 #it is then going to send the command "show CDP neighor" to the hosts and then cycle
-# through the data to find the local, remote interfaces and then print out the data
-# with the hostname to show which devices are connected to which interface
+#through the data to find the local, remote interfaces and then print out the data
+#with the hostname to show which devices are connected to which interface
 
 results = nr.run(task=pull_structured_data)
 
-#ipdb.set_trace()
