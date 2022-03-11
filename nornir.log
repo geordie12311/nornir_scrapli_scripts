@@ -1,0 +1,288 @@
+2022-03-11 16:37:30,656 -  nornir.core -     INFO -        run() - Running task 'Creating Backup Archives' with args {} on 10 hosts
+2022-03-11 16:44:52,361 -  nornir.core -     INFO -        run() - Running task 'send_configs' with args {'progress_bar': <tqdm.std.tqdm object at 0x7f9fc1187700>} on 10 hosts
+2022-03-11 16:44:52,981 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:52,981 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:52,982 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:52,982 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:52,984 - nornir.core.task -    ERROR -      start() - Host 'R2': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:52,983 - nornir.core.task -    ERROR -      start() - Host 'R8': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:52,985 - nornir.core.task -    ERROR -      start() - Host 'R8': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:52,983 - nornir.core.task -    ERROR -      start() - Host 'R5': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:52,985 - nornir.core.task -    ERROR -      start() - Host 'R5': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:52,982 - nornir.core.task -    ERROR -      start() - Host 'R7': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:52,985 - nornir.core.task -    ERROR -      start() - Host 'R7': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:52,983 - nornir.core.task -    ERROR -      start() - Host 'R3': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:53,061 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:53,061 - nornir.core.task -    ERROR -      start() - Host 'CSR1': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:53,062 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:53,063 - nornir.core.task -    ERROR -      start() - Host 'CSR2': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:53,246 - nornir.core.task -    ERROR -      start() - Host 'R6': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:53,246 - nornir.core.task -    ERROR -      start() - Host 'R6': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:44:53,517 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 625, in send_configs_from_file
+    configs = self._pre_send_from_file(file=file, caller="send_configs_from_file")
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/base_driver.py", line 338, in _pre_send_from_file
+    resolved_file = resolve_file(file)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/helper.py", line 231, in resolve_file
+    raise ScrapliValueError(f"File path `{file}` could not be resolved")
+scrapli.exceptions.ScrapliValueError: File path `configtest.txt` could not be resolved
+
+2022-03-11 16:44:53,517 - nornir.core.task -    ERROR -      start() - Host 'R1': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+
+2022-03-11 16:46:21,172 -  nornir.core -     INFO -        run() - Running task 'send_configs' with args {'progress_bar': <tqdm.std.tqdm object at 0x7f84414b3700>} on 10 hosts
+2022-03-11 16:46:52,954 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs_from_file' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir_scrapli/tasks/core/send_configs_from_file.py", line 68, in send_configs_from_file
+    scrapli_response = scrapli_conn.send_configs_from_file(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 627, in send_configs_from_file
+    return self.send_configs(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/network/sync_driver.py", line 513, in send_configs
+    responses = super().send_commands(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/sync_driver.py", line 215, in send_commands
+    response = self._send_command(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/decorators.py", line 413, in decorate
+    result = wrapped_func(*args, **kwargs)
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/driver/generic/sync_driver.py", line 138, in _send_command
+    raw_response, processed_response = self.channel.send_input(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/decorators.py", line 340, in _multiprocessing_timeout
+    self._handle_timeout()
+  File "/home/geordie/.local/lib/python3.10/site-packages/scrapli/decorators.py", line 316, in _handle_timeout
+    raise ScrapliTimeout(self.message)
+scrapli.exceptions.ScrapliTimeout: timed out sending input to device
+
+2022-03-11 16:46:52,955 - nornir.core.task -    ERROR -      start() - Host 'R4': task 'send_configs' failed with traceback:
+Traceback (most recent call last):
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/home/geordie/Nornir-automation/nornir_scrapli_scripts/run3.py", line 16, in send_configs
+    task.run(task=send_configs_from_file, file="configtest.txt")
+  File "/home/geordie/.local/lib/python3.10/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_configs_from_file (failed)
+
+

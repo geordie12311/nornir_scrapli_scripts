@@ -1,0 +1,8 @@
+ip scp server enable
+archive
+path flash:archive
+write-memory
+exit
+do wr
+exit
+
