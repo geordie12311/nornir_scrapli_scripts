@@ -17,7 +17,7 @@ def pull_structured_data(task):
     for key in neighbors:
         uptime = neighbors[key]["address_family"][""]["up_down"]
         rprint(f"{task.host} neighbor {key} uptime value is {uptime}")
-   #above function is going to create an object called pull_structured_data
+#above function is going to create an object called pull_structured_data
 #it is then going to csend the command (in this case show ip bgp summary) to the hosts
 #it is then going to put the output into structured data format and look for up_down value
 # of each neighbor and then then print the data to screen
